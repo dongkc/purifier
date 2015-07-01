@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 2.0.3" name="test">
+  <Target name="test" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="287" chipName="STM32F429ZI" boardId="" boardName="" boardUrl="" coreId="4" coreName="Cortex M4"/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Option name="SupportCPlusplus" value="0"/>
+        <Option name="DEBUG" value="2"/>
+        <Option name="WARNING" value="1"/>
+        <Option name="FPU" value="0"/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="STM32F429ZI"/>
+          <Define name="Q_SPY"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="nostartfiles" value="0"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Retarget"/>
+        <Option name="UserEditLinker" value="-Wl,-wrap,__aeabi_unwind_cpp_pr2;-Wl,-wrap,__aeabi_unwind_cpp_pr1; "/>
+        <Option name="DiscardUnusedSections" value="0"/>
+        <LinkedLibraries>
+          <Libset dir="" libs="stdc++"/>
+        </LinkedLibraries>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00200000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00030000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="c:/users/dongkechang.nuctech/appdata/roaming/coocox/coide/configuration/programdata/test/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="test"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="C:\Users\dongkechang.NUCTECH\AppData\Roaming\CooCox\CoIDE\config\flash\CooCox-Flash\CoIDE_STM32F4xx_2048K\STM32F4xx_2048.elf"/>
+      <Option name="org.coocox.codebugger.gdbjtag.coredebugInRamInitCommands" value="cd E:/workspace/test/test/Debug/bin restore test.elf set {unsigned int*}0xE000ED08 = 0x20000000 set $sp = {unsigned int*}0x20000000 set $pc = {unsigned int*}0x20000004 "/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./"/>
+  <LocalComponents/>
+  <Files>
+    <File name="qpcpp/qf_qact.cpp" path="qpcpp/source/qf_qact.cpp" type="1"/>
+    <File name="qpcpp/qs_port.h" path="qpcpp/ports/arm-cm/qv/gnu/qs_port.h" type="1"/>
+    <File name="qpcpp/qv.cpp" path="qpcpp/source/qv.cpp" type="1"/>
+    <File name="qpcpp/qf_time.cpp" path="qpcpp/source/qf_time.cpp" type="1"/>
+    <File name="qpcpp/qf_qeq.cpp" path="qpcpp/source/qf_qeq.cpp" type="1"/>
+    <File name="qpcpp/qpset.h" path="qpcpp/include/qpset.h" type="1"/>
+    <File name="qpcpp/qf.h" path="qpcpp/include/qf.h" type="1"/>
+    <File name="qpcpp/qs_dummy.h" path="qpcpp/include/qs_dummy.h" type="1"/>
+    <File name="qpcpp/qpcpp.h" path="qpcpp/include/qpcpp.h" type="1"/>
+    <File name="qpcpp/qs_64bit.cpp" path="qpcpp/source/qs_64bit.cpp" type="1"/>
+    <File name="qpcpp/qassert.h" path="qpcpp/include/qassert.h" type="1"/>
+    <File name="LibraryHacks.cpp" path="app/LibraryHacks.cpp" type="1"/>
+    <File name="qpcpp/qep.h" path="qpcpp/include/qep.h" type="1"/>
+    <File name="qpcpp/qf_qmact.cpp" path="qpcpp/source/qf_qmact.cpp" type="1"/>
+    <File name="qpcpp/qs.h" path="qpcpp/include/qs.h" type="1"/>
+    <File name="qpcpp/qs_fp.cpp" path="qpcpp/source/qs_fp.cpp" type="1"/>
+    <File name="qpcpp/qf_ps.cpp" path="qpcpp/source/qf_ps.cpp" type="1"/>
+    <File name="qpcpp/qf_dyn.cpp" path="qpcpp/source/qf_dyn.cpp" type="1"/>
+    <File name="qpcpp/qp_port.h" path="qpcpp/include/qp_port.h" type="1"/>
+    <File name="qpcpp/qs_pkg.h" path="qpcpp/source/qs_pkg.h" type="1"/>
+    <File name="qpcpp/qequeue.h" path="qpcpp/include/qequeue.h" type="1"/>
+    <File name="qpcpp/qv_port.h" path="qpcpp/ports/arm-cm/qv/gnu/qv_port.h" type="1"/>
+    <File name="qpcpp/qv.h" path="qpcpp/include/qv.h" type="1"/>
+    <File name="qpcpp/qs.cpp" path="qpcpp/source/qs.cpp" type="1"/>
+    <File name="qpcpp/qf_mem.cpp" path="qpcpp/source/qf_mem.cpp" type="1"/>
+    <File name="bsp.cpp" path="app/bsp.cpp" type="1"/>
+    <File name="qpcpp/qf_pkg.h" path="qpcpp/source/qf_pkg.h" type="1"/>
+    <File name="qpcpp" path="" type="2"/>
+    <File name="qpcpp/qf_act.cpp" path="qpcpp/source/qf_act.cpp" type="1"/>
+    <File name="qpcpp/qf_port.h" path="qpcpp/ports/arm-cm/qv/gnu/qf_port.h" type="1"/>
+    <File name="qpcpp/qep_msm.cpp" path="qpcpp/source/qep_msm.cpp" type="1"/>
+    <File name="qpcpp/qf_defer.cpp" path="qpcpp/source/qf_defer.cpp" type="1"/>
+    <File name="qpcpp/qep_hsm.cpp" path="qpcpp/source/qep_hsm.cpp" type="1"/>
+    <File name="qpcpp/qep_port.h" path="qpcpp/ports/arm-cm/qv/gnu/qep_port.h" type="1"/>
+    <File name="qpcpp/qf_actq.cpp" path="qpcpp/source/qf_actq.cpp" type="1"/>
+    <File name="main.c" path="app/main.c" type="1"/>
+    <File name="qpcpp/qmpool.h" path="qpcpp/include/qmpool.h" type="1"/>
+  </Files>
+  <Bookmarks/>
+</Project>
